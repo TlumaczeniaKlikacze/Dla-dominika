@@ -1,3 +1,4 @@
+
 let color = 'white'
 let backup;
 if(localStorage.getItem('big')){
@@ -36,6 +37,12 @@ if(localStorage.getItem('bg')){
     }
     backup = for_backup
     color = 'black'
+    if(document.querySelector('#_header_right-46-7')){
+        const el = [...document.querySelectorAll('.oxy-nav-menu-hamburger-line')]
+        for(const ye in el){
+            el[ye].style.backgroundColor = 'yellow'
+        }
+    }
 }
 
 var css = `.add_bigger_bigger_font{
@@ -120,6 +127,12 @@ document.getElementById('text_block-101-7').addEventListener('click',()=>{
             elements[lol].style.backgroundColor = 'black'
             elements[lol].style.color = 'yellow'
         }
+        if(document.querySelector('#_header_right-46-7')){
+            const el = [...document.querySelectorAll('.oxy-nav-menu-hamburger-line')]
+            for(const ye in el){
+                el[ye].style.backgroundColor = 'yellow'
+            }
+        }
         backup = for_backup
         color = 'black'
         localStorage.setItem('bg',true)
@@ -130,6 +143,16 @@ document.getElementById('text_block-101-7').addEventListener('click',()=>{
         }
         if(document.querySelector('#_header-42-7'))
         document.querySelector('#_header-42-7').style.backgroundColor = 'white'
+        if(document.querySelector('#_nav_menu-50-7')){
+            document.querySelector('#_nav_menu-50-7').style.backgroundColor = 'white'
+        }
+        if(document.querySelector('#_header_right-46-7')){
+            const el = [...document.querySelectorAll('.oxy-nav-menu-hamburger-line')]
+            for(const ye in el){
+                el[ye].style.backgroundColor = 'black'
+            }
+        }
+        
         color = 'white'
         localStorage.removeItem('bg')
     }
